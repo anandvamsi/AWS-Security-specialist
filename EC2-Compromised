@@ -1,0 +1,8 @@
+How to deal with Compromised EC2 instance
+-------------------------------------------
+- Lock the instance down
+- Take the  EBS volume
+- Memory Dump::- for foresnics purpose
+- Perform Forensic Analysis
+- Terminate the instance
+
