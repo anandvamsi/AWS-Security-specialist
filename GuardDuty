@@ -1,0 +1,48 @@
+Guard duty 
+-------------
+Whitelist IP (TrustedIp list)
+- we have option to whitelist the IP in guarduty 
+- upload the IP-List in the s3 bucket and use the same path in the guard-duty
+
+Thread-List
+- we can upload the list which we know earlier that this would cause an attack 
+
+
+Option to Archive the findings in Guard-duty
+---------
+Imagine a case where we done with fixin of alert , a team member can archive it which goes to archive list 
+
+
+ Suppress-findings 
+
+
+ Active finding types:: which shows all the findings of the guard duty  
+https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html
+
+
+Manage GT organianzation (Central place)
+-------------------------
+case where we have multiple Accounts 
+client Accounts are named Member Accounts{1,10} should be pointed to Master Account
+
+Go to the Master Account GT
+- In the left Navigation pane selet the Accounts , Enter the Account ID and email address
+
+Go to the Member Account 
+- In the left Navigation pane selet the Accounts, you would see the invitation from the Master Account 
+
+
+Event Driven Approch in security
+----------------------------------
+Imagine a case where a s3 bucket being in open state, lambda will listen to check and block the public settings 
+Preventive controls in AWS
+- WAF
+- IAM 
+- Network Firewall
+- KMS
+
+Dective controls in AWS
+- Cloudwatch
+- CloudTrail
+- Inspector::- vulnerbilitesi in Inspector
+- Detective 
