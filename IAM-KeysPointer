@@ -1,0 +1,35 @@
+Pointer 2:-
+Disabling the IAM creds are better than deleting the creds
+
+
+Activity 
+----------
+Create and IAM configure key in a server
+TO generate a temp key from the Access key and secret key use the command
+#aws sts get-session-token 
+which will generate temp Access key ,secret key and session 
+Note:- these keys do have an expiration 
+
+Use above information to config 
+aws_access_key=
+aws_secret_key=
+aws_session_token= 
+configure the same in the ~/.aws/config
+
+Note if the attack happens , we generally delete/inactive the orginal key , But still the temp keys will works
+
+
+How to solve solve this issue then:-
+Method-1 :- Either remove all the polices of that IAM user/role
+Method-2: Add Explict deny policy to the exiting policy
+    - Effect deny
+        Actions *
+        Resources *
+
+Temp Creds which we created stays for 15-36 hrs
+
+Pointer 4
+--------------
+Because access_key were delete delete/disable in previous step,
+- Consdider Creating a new pair of access/secret key
+- Instead of using lon ter, keys, consider using IAM roles or federatin
