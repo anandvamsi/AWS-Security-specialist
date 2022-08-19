@@ -1,0 +1,25 @@
+Incident-Response Plan
+
+- Preparation::- Make sure controls are in the place.
+  More like enabling cloudtrails,VPC flow los
+  Use AWS organization to seperate Account to redunce the Blast redius
+
+- Detecting::- 
+Behaviou Analysis using Behaviour breaches
+Exmaples:- Lots of AWS console sign-in failures in past 1 hr
+If a user logging at 3AM morning and launching a server
+SNS, Guardty
+
+- Containment 
+if the server is breached with Malaware we can run quick AWS-CLI command to attach restricted security group
+
+- Invetigation
+Do Foresics
+Use CloudWatch logs to determine what occured inside the server
+Use a AWS Confi to see the infrastrucure timelines if there are anything was changed
+
+
+- Recovery
+Pre-Build AMI to build server from new app server
+
+- LessonLearned
