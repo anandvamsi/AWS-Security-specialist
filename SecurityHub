@@ -1,0 +1,18 @@
+
+AWS security Hub
+---------------
+Regional services :- if we have multiple regions, we need enable in all the regions
+
+AWS security Hub gives the comprehensive view of your high priority  security Alerts and complaince across the AWS Accounts 
+
+Prerequsite:-
+Before you enable security hub you should enable the config
+
+Features::-
+#Events from AWS Guard-duty,Inspector,Macie will go to securityHub
+
+#Following standards supports.
+ - CIS AWS Foundations
+ - PCI DSS :- 
+
+#Intergration with thirdparty providers
