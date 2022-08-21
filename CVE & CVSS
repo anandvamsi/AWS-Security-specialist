@@ -1,0 +1,7 @@
+CVE and CVESS
+----------------
+CVE stands for Common Vulnerbilities and Exposure
+CVE are like dictornary publicly known information security Vulnerabilites 
+NIST :- National vulnerbility list int he soruces of CVES
+
+CVSS:- Is the score agaist all the CVE that determines the levels(Low,high,medium)
