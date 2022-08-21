@@ -1,0 +1,14 @@
+
+AWS Inspector::- Vulnebility Scanner
+--------------
+AWS inspector is similar to vulnerbility scanner which will scan specific system vulnerabilites and provide the results.
+It relies on the agent installed  on the server  to Scan the server
+AWS Inspector can do scanning at EC2/ECR level
+
+Lab1:-
+Create a EC2- Amazon Linux install SSM Agent 
+- Attach the ROle with permission AmaoznSSMInstanceCOre
+
+Go to the AWS Inpector you will be able to see the vulnerbilites 
+
+Disable the services once you are done.
