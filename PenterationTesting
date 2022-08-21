@@ -1,0 +1,17 @@
+Penetration Tests
+------------------
+we try to test system to exploit(Hack into system)
+Do there alot of AWS components where Amazon has allowed to do Pen Test and Few not
+
+Following List where pen test approval not needed::
+Amazon EC2 instances, NAT Gateways, and Elastic Load Balancers
+Amazon RDS
+Amazon CloudFront
+Amazon Aurora
+Amazon API Gateways
+AWS Lambda and Lambda Edge functions
+Amazon Lightsail resources
+Amazon Elastic Beanstalk environments
+
+Following List where PenTest approval is needed
+DynamoDB
