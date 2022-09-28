@@ -1,0 +1,13 @@
+
+System Manager
+-----------------
+Automation a capability of AWS ssm simplifies common maintaince and deployment tass Amazon EC2 instnace and other AWS resources
+
+Attach IAM to EC2
+Perform patching
+stopping of EC2 instnace
+
+Overview of SSM inventory
+-------------------------
+AWS system manaer inventory provides visibility into your Amazon EC2 and on-premise computing env
+It can capture information like Applicaton name,files network configration instance details 
