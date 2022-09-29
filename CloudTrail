@@ -1,0 +1,12 @@
+CloudTraill
+----------------
+Lets monitor every thing
+Usecase::- Installing video survillance systems allow us to monitor activies around the clock and privdes alot of benefits
+- Deterring Criminals
+- Helps in invetingation
+- Regular monioting of activies
+
+AWS cloudtrail is now enabled by default  for all the customers and provide visibility of account acitivity without the need for you to configure
+a trail in the service to get started.
+Events are not stored for life time.
+Inorder to save the logs for more time and do analytics, we are creating a new trail which will send logs to cloudwatch-logs/s3 bucket
