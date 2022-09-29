@@ -1,0 +1,9 @@
+Trusted Advisor
+-------------------
+AWS trusted Advisor analyzes your AWS environemnt and provides best practice recommendation in 5 major categories
+- cost optimization:: that can save money
+- performance:: improves speed and responsiveness of your application 
+- security ::- recommendation that help increase security
+- Fault Tolerance ::- recommendation that help increase the reslierance of your AWS solutions
+- service limts 
+
