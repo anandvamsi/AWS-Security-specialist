@@ -11,3 +11,27 @@ Overview of SSM inventory
 -------------------------
 AWS system manaer inventory provides visibility into your Amazon EC2 and on-premise computing env
 It can capture information like Applicaton name,files network configration instance details 
+
+system manager
+----------------
+AWS system manager is a group of services which allows customers  to have a better visibility and control the infra
+RUN command
+Paramter store
+session Manager
+Patch Manager
+
+For a ec2 instance to be managed you need to install SSM agent and you need a role with the policy AmazonSSMManagedInstanceCore 
+
+
+Benefits of a session Manager
+------------------------------
+Centralized Access control using IAM policies
+No inbound port needs to be open
+Logging and audting session activity
+one click access to instance from the console and CLI
+No need of VPN to connect to instances.
+
+
+Patch Baseline
+-----------------
+patch baseline service determines the list of missing patches that need to be install in the EC2 instance.
