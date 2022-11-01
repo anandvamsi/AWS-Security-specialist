@@ -1,0 +1,12 @@
+Basic of Amazon Kenesis
+
+kinesis makes it easy to collect, process and analyze real time streaming data so you can get timely insghts and react quickly to new information
+Amaaon kinesis offers key capabilties to cost effectively proces steamin data at any scale.
+
+Amazon kinesis offers key capabilites to cost effectively process streaming data at any scale.
+
+Amazon kinesis is a set of services which makes it easy to work with steaming data on AWS
+Kinesis Data streams:- captures, processes and stores data streams in real time
+Kinesis data firehose Primary to move data from point A to Point B
+Kinesis data Analytics::- Analyze streaing data in real-time with SQL/Java code
+Kinesis video streams:: capture,prosses and stores vide steams
