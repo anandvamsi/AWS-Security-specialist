@@ -1,0 +1,21 @@
+S3 might contains sensitive information like PII data, database backups, SSL private keys and various others
+AWS Macie make user of machine learning to indetify sensitve data stored in AWS
+
+Macie can check 
+- AWS secret key
+- open SSH private keys
+- PGP private keys
+- putty private keys
+- Public keys cyrptogrphy (PKCS)
+- Bank account numbers
+- CC numbers
+- Health information 
+-
+
+we can also create our own regular expression in macie , which not should be present in the s3 log file.
+macie will check if the pattern exist or not.
+
+Discover-results
+where we can configure a new s3 bucket which will store the s3-data that is having issues/vulnerable.
+
+Disable the macie service once done.
