@@ -1,0 +1,13 @@
+Simple Analogy- Vistor register of the Apartment
+---------------------------------------------------
+
+Log entry has to be made during entry as well as during exit
+
+Name
+source Place
+Destination Place
+Entry and exist
+Purpose of visit
+
+VPC flow captures data at the interface level as well as the VPC level.
+we can ship the logs to s3 bucket/cloud-watch logs.
