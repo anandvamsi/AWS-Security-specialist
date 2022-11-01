@@ -10,3 +10,33 @@ AWS cloudtrail is now enabled by default  for all the customers and provide visi
 a trail in the service to get started.
 Events are not stored for life time.
 Inorder to save the logs for more time and do analytics, we are creating a new trail which will send logs to cloudwatch-logs/s3 bucket
+
+There are 3 typles of events that can be logged in cloudtrails
+1. Management events::- default option
+2. Data events
+3. Insight events
+
+Management events:
+Create  a new ec2 server , creates a new IAM user, user Sign-ins
+
+Data events
+Data events provide information aout the resourse operatons performed on or in a resource and are often high volumne activities
+S3 get object, putobject and Delete object 
+
+Insight events
+Insight events helps customers unusual operations activity in the aws accounts, such as spike in resource provisioning , burst of IAM actions
+more use for finding out unsual patterns
+API-call rate
+API-rate event.
+
+
+Cloudtrail-log file intergrity 
+----------------------------
+This can check if the  cloudtrail in the s3 is tampered or not by the attacker , by default Integrity is enabled in the trail level.
+if you want to check the integrity of the files, we need use the cli
+aws cloudtrail describe-trails
+aws cloudtrail validate-logs --trail-arn [ARN-HERE] --start-time 20190101T19:00:00Z
+
+Note:- if you intentionally delete a s3 log file, and execute the above command, it will say that integrrity has been lost
+
+
