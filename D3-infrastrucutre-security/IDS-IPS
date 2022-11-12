@@ -1,0 +1,6 @@
+IDS:- Intrusion Dection system 
+IPS: Intrudtion prevention system 
+
+IDS/IPS will check the TCP-data of each TCP packet 
+In case of IDS/IPS ::- its deployed in the public subnet  and agents are installed on all the ec2 servers which will communicate to IDS/IPS appliance
+Tred-micro deep security ::- Market place AMI
