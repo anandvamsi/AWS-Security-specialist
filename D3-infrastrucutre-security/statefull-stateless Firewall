@@ -1,0 +1,4 @@
+Sateful and stateless firewall.
+
+In stateless firewall :- we need mention both inbound as well as outbound rules ::- NACL 
+In stateful firewall ::- we need to mention only inbound, outbound will be allowed by default.::- Security group
