@@ -1,0 +1,5 @@
+EBS ::- encyrption 
+-------------------
+Before terminating instance, customer can wipe the data in EBS:: use the DD command
+AWS  also wipes the data immediately before the EBS is made fore re-use
+when the storae device has reach its end of use, they decommisioned via steps mentioned in NIST 800-99 and DOD 5220.22
