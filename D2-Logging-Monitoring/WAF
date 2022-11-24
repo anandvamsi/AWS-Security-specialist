@@ -1,5 +1,20 @@
 WAF
 ------------
+AWS WAF is a web application firewall.
+
+Lets you moniotr HTTP and HTTPs requests that are forwarded to an API GW, Amazon CF and ALB
+Allows you to control access to your content by using IP address from where  the request orginated or request query stirng values.
+If the request is allow it provides the access, else it will provide 403 status code forbidden access.
+3 things make WAF work:- ACL, rules, and Rule Groups.
+AWS WAF includes a full-featured API that you can use to automated the creation, deployment and maintaince of security rules.
+AWS manages WebACL capacity units(WCU) for rules, rule groups and web ACLs
+WCU is a dimention that is used to calculate and contril the operating resouces that are used to rpcoess rules within a web ACL.
+Note:- WCU does not reprsent a rule for pricing consideration.
+
+Web ACLs
+- 
+
+
 
 WebACLRules
 There are two different types of rules
@@ -49,3 +64,6 @@ Implemenation notes:-
 First implement WAF dev/stage level if its working good replicate the same in production
 Applicaton security should be involved while implementing WAF
 
+Pricing Details:-
+AWS WAF charges based on the number of Web ACLs that you create , the number of rules that you can add per Web ACL, and numner web requests that you can 
+receive 
