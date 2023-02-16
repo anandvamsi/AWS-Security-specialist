@@ -1,0 +1,10 @@
+#KMS keys
+- CMK keys cannot be deleted Immeditly ,It takes 7 days after marrking it for deletion.
+- KMS keys dont rotate by default.
+    - During the rotation new data will be encryted with new CMK and older data wil decrypted by previous save backing day.
+    
+    
+    
+    
+ S3
+ The company’s security policy mandates that data should be encrypted at rest and key should be controlled by the client.::- S3-SSE
