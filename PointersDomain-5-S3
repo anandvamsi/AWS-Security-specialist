@@ -1,0 +1,11 @@
+If each object in s3 needs to be encypted with a unique key, than you can make use of multiple CMK.
+if you want to encrypt data with CMK, make use of SSE-KMS
+
+you can also create 2 Factor Authenticaton for decryption, for such use-case you can define a MFA policy with key policy.
+
+if you want to enfore encryptin in transit, you can create a s3 bucket policy
+
+"condition": {
+  "Bool" :{
+    "aws:SecureTransport": "true"
+}
