@@ -1,0 +1,6 @@
+DynamoDB-
+we can make use of Dynamodb Encryption Client Liberary to encrypt data at origin before it stored in DynamoDB
+
+CLoudtrails & Encryption
+By default, logs files delivered by cloudtrails to s3 is encrypted by AWS server side encryption.
+we also have option for log file encryption using SSE-KMS
