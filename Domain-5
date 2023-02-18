@@ -1,0 +1,9 @@
+#ACM
+AWS certificate Manager
+- Certificates in ACM are regional resources. To use Certificate with ELB you must issue certificate in the same region as ELB.
+There are two ways in which certificate can be issued.
+- Email validation
+- DNS Validation
+
+Certificae for the domain example.com will not work for test.example.com
+we need to get a wildcard certificate *.example.com for the above.
