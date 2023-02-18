@@ -1,0 +1,2 @@
+what happens if EBS in encrypted with CMK and that CMK is deleted.
+EBS will work, till it is not unmounted :- Back up data quickly
