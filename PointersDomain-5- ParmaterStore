@@ -1,0 +1,6 @@
+ParamterStore.
+To perform any operation on a secure string Paramter, Paramter store must be able to use the AWS KMS CMK .
+- Most of the Paramter store failures related to CMK are caused by following problems.
+  - DOnt have enough permission to perform specific action on the CMK
+  - CMK is not found,This typically happends when you use an incorrect identifier for the CMK.
+  - THe CMK is not enabed, when this occures Paramater store returns Invalud key ID exeception.
