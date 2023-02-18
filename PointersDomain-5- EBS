@@ -1,2 +1,8 @@
 what happens if EBS in encrypted with CMK and that CMK is deleted.
 EBS will work, till it is not unmounted :- Back up data quickly
+
+
+A user having full access to EC2 cannot start EC2 instances that is using encyrpted EBS volumes.
+In order to overcome this Scneario, Following are two important policy actions must be attached
+KMS:Decrypt
+KMS:CreateGrant
