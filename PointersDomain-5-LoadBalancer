@@ -3,3 +3,7 @@ Elastic Load Balancer
 ALB can be intergrated with WAF for the Layer7 protection.
 if applicaton is running a customer proprietry protocool than HTTP/HTTPS listeners cannot be used, Make use if TCP based listeners.
 ELB supports Perfect forward Secrecy and we need to enable ECDHE key exchange.
+
+
+"perfect Forward Secrecy" is a feture that provides addition safeguard against the evesdropping of encrypted data, through use of unique random session key.
+This prevents the decoding of captured data, even if "secret long term" key is compromised.
