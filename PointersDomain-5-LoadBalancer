@@ -1,0 +1,5 @@
+Elastic Load Balancer
+--------------------
+ALB can be intergrated with WAF for the Layer7 protection.
+if applicaton is running a customer proprietry protocool than HTTP/HTTPS listeners cannot be used, Make use if TCP based listeners.
+ELB supports Perfect forward Secrecy and we need to enable ECDHE key exchange.
