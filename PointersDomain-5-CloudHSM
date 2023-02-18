@@ -1,0 +1,9 @@
+CloudHSM
+- Cloud HSM is a single tenanted
+It must be in VPC,for the Fault Tolerance we need to build cluster with two cloud HSM.
+we can intergrate with Redshift,RDS for Oracle.
+AWS uses SafeNetLuna SA700 appliance for CloudHSM
+Provides tamper-evident controls.
+
+CLoudHSM vs KMS
+CloudHSM:- only org staff can administer the keys while in KMS AWS staff also administer the keys.
