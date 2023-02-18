@@ -9,3 +9,10 @@ if you want to enfore encryptin in transit, you can create a s3 bucket policy
   "Bool" :{
     "aws:SecureTransport": "true"
 }
+
+
+Within Server Side encryption there, 3 options can be used depending on the usecase.
+
+Server Side Encryption with Amazon S3 Managed Keys(SS3-S3)
+Server side Encryption  with CMK(Customer Master keys) stored in AWS kMS
+server side Encryption with Customer provide Keys(SSE-C)
