@@ -3,6 +3,12 @@ EBS will work, till it is not unmounted :- Back up data quickly
 
 
 A user having full access to EC2 cannot start EC2 instances that is using encyrpted EBS volumes.
-In order to overcome this Scneario, Following are two important policy actions must be attached
+In order to overcome this Scenario, Following are two important policy actions must be attached
 KMS:Decrypt
 KMS:CreateGrant
+
+How does EBS encrytion works?
+EBS uses a datakey derived from a CML to encrypt data as it get stored on-disk. EBS stores the data key in its volume metadata.
+When the EBS is detached from an instance, the data key inside its metadata remains in the encrypted form.
+Once it is attached state, EBS uses your CMK to decrypt teh encrypted data key. The resulting data key in plaintext form is persisted in the hypervisor memory.
+ 
