@@ -1,0 +1,11 @@
+
+
+
+
+Encryption in transit
+------------------------
+Amazon S3 permits HTTP and HTTPS request by default(as you all know HTTP is insure)
+In order to protect the data in the transit we need use the conditional block  "aws:SecureTransport" to True.(This bucket policy will only allow HTTPS request to all objects inside
+examplebucket. All HTTP request will be denied.
+
+Usin the VPC endpoints we can privately connect VPC to Amazon s3.
