@@ -1,0 +1,16 @@
+KMS(Key Management service)
+Is a managed service that enables you to easly encrypt your data.
+KMS provides HA key storage,Management and auditing solution for you to encrypt data within
+your own applications
+
+Features:-
+  - KMS is integrated with CloudTrail, which provides you that ability to audit who used which
+  keys, on which resources and when
+  - CMK(Customer Managed Keys) are used control access to data encyption keys and decryption
+  - we have option to Automatically rotate KMS Master keys without the need to re-encypt data that
+  already been encrypted your master key.
+  - To sure HA, KMS store multiple versions od the keys
+  
+  
+CMK(Customer managed keys)
+CMKs that 
