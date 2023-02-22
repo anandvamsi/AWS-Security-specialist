@@ -11,4 +11,6 @@ How does EBS encrytion works?
 EBS uses a datakey derived from a CML to encrypt data as it get stored on-disk. EBS stores the data key in its volume metadata.
 When the EBS is detached from an instance, the data key inside its metadata remains in the encrypted form.
 Once it is attached state, EBS uses your CMK to decrypt teh encrypted data key. The resulting data key in plaintext form is persisted in the hypervisor memory.
- 
+
+IF you are migrating an encryted AWS resources from one region to another, you have to create a new CMK
+in the targert region.
