@@ -12,5 +12,25 @@ Features:-
   - To sure HA, KMS store multiple versions od the keys
   
   
+  CMK is a regional service, to use in different region decrypt the data from the source CMK and re-encrypte it withe CMK in the destination region
+  
 CMK(Customer managed keys)
-CMKs that 
+Customer managed keys are primary resources in AWS KMS
+The CMk also contains the key material used to encrypt/decrypt data.
+CMKs are created in AWS KMS
+By default AWS KMS create the key material for a CMK
+can also import the key material
+A CMK can generate , encrypt and decrypt "data Encryption Keys".
+Data Encryption keys can be used for encrypting large amounts of data
+
+
+Amazon Manage CMKs
+Created ,Managed are used on behlaf by an AWS srevice that is intergrated with AWS KMS.
+you cannot manage these CMKs, rotate them or change their key policies.
+You also cannot use AWS Managed CMKs in cryptographic operations directly; the 
+
+Data Encryption Keys
+Data keys are encypriotn keys used to encrypt data, includin large amount data 
+you can use AWS KMS CMK to generate,encrypt and decrypt data keys.
+AWS KMS doest store,manage or track your data keys or perform cyrpographic operations wit data keys
+
