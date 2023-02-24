@@ -52,10 +52,31 @@ A CMK can generate , encrypt and decrypt "data Encryption Keys".
 Data Encryption keys can be used for encrypting large amounts of data
 
 
-Amazon Manage CMKs
+#Amazon Manage CMKs
 Created ,Managed are used on behlaf by an AWS srevice that is intergrated with AWS KMS.
 you cannot manage these CMKs, rotate them or change their key policies.
-You also cannot use AWS Managed CMKs in cryptographic operations directly; the 
+You also cannot use AWS Managed CMKs in cryptographic operations directly;
+Usecase: S3, 
+
+
+#Customer Managed Keys(CMKs)
+The CMKs that you create Manually are customer Managed keys
+Customer managed key are KMSkeys in your AWS Account that you create,own and manage.
+You have full control over these KMS keys
+It provides option to enable/diable keys and deleted when not required::- where AWS manage keys dont have this option
+
+
+Difference b/w AWS Managed key and Customer Managed Keys
+AMK(AWS Manage Keys) 
+   - cannot be manaed by us 
+   - no monthly fee 
+   - Rotation is optional
+CMK(Customer Managed Key)
+  - we can manage it
+  - There is monthly fee
+  - Rotation required every year
+
+
 
 Data Encryption Keys
 Data keys are encypriotn keys used to encrypt data, includin large amount data 
