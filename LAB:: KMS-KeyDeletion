@@ -1,0 +1,17 @@
+Deleting KMS is descrutive process and potentially dangerours and irresistible process.
+After a KMS key is deleted, you longer can decyrpt the data which is already encrypted under that KMS key.
+If you are not sure about the data better disable the key for some duration; you can re-enable the key which is in diabled state.
+And if you pretty sure about KMS key ; Mark it for deletion 
+
+
+#Before Disabling the key
+aws kms encrypt --key-id "2cb864df-970c-44ef-86dc-10XXXXXX820d30" --plaintext fileb://mypassword_encrypted --region us-west-2
+{
+    "EncryptionAlgorithm": "SYMMETRIC_DEFAULT",
+    "KeyId": "arn:aws:kms:us-west-2:2100831XXXX:key/2cb864df-970c-44ef-86dc-102a82e20d30",
+    "CiphertextBlob": "AQICAHjukCH6/JMOKKZFFTxBXXXXhqJZxd8Up9Pw/zrJBXgHjss3xthLQ/XLz6UcWuQ1hAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMnhd78sDlQgx3Yh4wAgEQgDt5l1CeKJL0FdMAOgoYrOju/SMJt9TD4VydX/adv4At3YEbmYAWMxKcOWzuQ3CZfRdAYRSL5FqqUiFg8g=="
+}
+
+#Disbale the KMS key in the AWS console
+aws kms encrypt --key-id "2cb864df-970c-44ef-86dc-1XXX20d30" --plaintext fileb://mypassword_encrypted --region us-west-2
+An error occurred (DisabledException) when calling the Encrypt operation: arn:aws:kms:us-west-2:21008XXXX1852:key/2cb864df-970c-44ef-86dc-102a82e20d30 is disabled
