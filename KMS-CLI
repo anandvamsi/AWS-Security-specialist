@@ -1,0 +1,17 @@
+step1
+aws kms generate-data-key --key-id alias/<name> --key-spec AES_256 --region us-west-2
+- This should return two version of data keys
+  - one plain text data key
+  - one Encrypt data key(Ciphertext)
+  
+ step1.1
+      Copy the base64 decoded versions of plain text and ecnrypted keys in two diferent files
+      
+ step2:- Encyrpt using openssl
+ openssl enc -in ./<inputfile> -out ./passwordfilex_ecrypted.txt fileb://datakey_plaintext
+ 
+ 
+ step3;- Inorder to decrypt we need data key in plain text; so again i call KMS provide me datakey using the reference encrypted_datakey
+ aws kms decrypt --ciphertext-bob fileb://encyrpted_data_key
+ 
+ openssl enc -in ./passwordfilex_ecrypted.txt -out ./password_decrypted -d -aes256 -k fileb://paintext_datakey
