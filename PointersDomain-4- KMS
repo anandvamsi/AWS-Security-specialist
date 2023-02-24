@@ -1,7 +1,28 @@
+Data encryption 
+
+Encryption of data at rest
+--------------------------
+1. client side encryption
+2. server side encryption
+
+client side encryption 
+----------------------
+we encrypt data manage you own keys
+Use KMS if required
+
+Server side encryption
+----------------------
+AWS encrypt your data and manage key for you
+Most AWS services like S3,EBS,Redshift provde SSE usin KMS behind the scenes 
+
+
+
 KMS(Key Management service)
-Is a managed service that enables you to easly encrypt your data.
 KMS provides HA key storage,Management and auditing solution for you to encrypt data within
 your own applications
+- It only stores Customer Master Keys(CMK)
+_ it uses Hardware Security Modules(HSM) to store CMKs
+- It is intergrated with most of the services::- using KMS APIs
 
 Features:-
   - KMS is integrated with CloudTrail, which provides you that ability to audit who used which
@@ -11,10 +32,17 @@ Features:-
   already been encrypted your master key.
   - To sure HA, KMS store multiple versions od the keys
   
+  CMK
+  KMS only manages CMKs. It does NOT manages DataKeys
+  A CMK never leaves region that is created
+  Can only encrypt maximum of 4KB(But uses datakey for larger object encryption)
+  - Data key are generated from CMK; manay DK can be generated from CMKs
+  
+  
   
   CMK is a regional service, to use in different region decrypt the data from the source CMK and re-encrypte it withe CMK in the destination region
   
-CMK(Customer managed keys)
+CMK(Customer Master keys)
 Customer managed keys are primary resources in AWS KMS
 The CMk also contains the key material used to encrypt/decrypt data.
 CMKs are created in AWS KMS
