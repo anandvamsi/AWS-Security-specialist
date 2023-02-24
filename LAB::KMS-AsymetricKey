@@ -1,0 +1,14 @@
+Assymetric key uses both private and public key pairs
+-----------------------------------------------------
+
+Step1:- Create a Assymetric key in the AWS KMS console.
+
+step2:- login to ec2 with admin access role.
+Download the public key from the  Assymetric key
+
+step3
+Create a file with pain data "PT_password"
+openssl rsautl -encrypt -oaep -in PT_password -out encrypted.txt -pubin -inkey data.pub
+ 
+step4:
+aws kms decrypt --key-id "925760b0-17aa-47be-bfXXXXXb" --encryption-algorithm RSAES_OAEP_SHA_1 --ciphertext-blob fileb://encrypted.txt --query Plaintext --output text | base64 -
