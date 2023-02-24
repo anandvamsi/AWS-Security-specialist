@@ -1,17 +1,28 @@
 step1
-aws kms generate-data-key --key-id alias/<name> --key-spec AES_256 --region us-west-2
+aws kms generate-data-key --key-id alias/demokms --key-spec AES_256 --region us-west-2
+{
+    "Plaintext": "XXXctNcb8XvXXXXpSk258ngbzrD8ojHXbn4Z/S7S8dFk=",
+    "KeyId": "arn:aws:kms:us-west-2:210083101852:key/2cb864df-970c-44ef-86dc-102XXXX",
+    "CiphertextBlob": "AQIDAHjukCH6/JMOKKZFFTxBEo54o5KhqJZxd8Up9Pw/zrJBXgH6Faf26ASCkBlFpQr7uCsVAAAAfjB8BgkqXXXXXXXXXXXXXXqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMiVTSEmWC29hflU/UAgEQgDvOcwRnwu3l8hfNlMfw/d0NqiLWYtNILYHqPoXkKgxT4J1dzfPFY51lP+8P0iBQPoGBQrNJlAJXpQHo2Q==
+
+Notes:
 - This should return two version of data keys
   - one plain text data key
   - one Encrypt data key(Ciphertext)
   
+  
  step1.1
       Copy the base64 decoded versions of plain text and ecnrypted keys in two diferent files
+      echo "ZWctNcb8XvG3mqpSk258ngbzrD8oXXXXXk=" | base64 --decode > PT_datakey
+      echo "KZFFTxBEo54o5KhqJZxd8Up9Pw/zrJBXgH6Faf26ASCkBlFpQr7uCsVAAAAfjB8BgkqXXXXXXXXXXXXXXqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMiVTSEmWC29hflU/UAgEQgDvOcwRnwu3l8hfNlMfw/d0NqiLWYtNILYHqPoXkKgxT4J1dzfPFY51lP+8P0iBQPoGBQrNJlAJXpQHo2Q==
+=" | base64 --decode > E_datakey
+      
       
  step2:- Encyrpt using openssl
- openssl enc -in ./<inputfile> -out ./passwordfilex_ecrypted.txt fileb://datakey_plaintext
+ $ openssl enc -in ./mypassword -out ./mypassword_encrypted -e -aes256 -k fileb://./PT_datakey
  
  
  step3;- Inorder to decrypt we need data key in plain text; so again i call KMS provide me datakey using the reference encrypted_datakey
- aws kms decrypt --ciphertext-bob fileb://encyrpted_data_key
+ aws kms decrypt --ciphertext-blob fileb://./E_datakey --region us-west-2
  
- openssl enc -in ./passwordfilex_ecrypted.txt -out ./password_decrypted -d -aes256 -k fileb://paintext_datakey
+ openssl enc -in  ./mypassword_encrypted -out ./PT_password -d -aes256 -k fileb://./PT_datakey
