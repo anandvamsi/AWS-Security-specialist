@@ -1,0 +1,3 @@
+
+A security Engineer wants to rotate the KMS(Customer Managed Key) that were created usin imported key material::- Create a new KMK
+and change application to point to new CMK
