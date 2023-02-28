@@ -5,5 +5,19 @@ we can intergrate with Redshift,RDS for Oracle.
 AWS uses SafeNetLuna SA700 appliance for CloudHSM
 Provides tamper-evident controls.
 
+Advantags 
+Highly Available
+  Instead of using HSM in single physical location,WS cloud HSM managed HSMs in a cluster across AZ
+  we can use cloud HSMs/region.
+  
+ Only Accessible By Using VPC
+     AWS CLoud HSM cluster allows creating HSM in a VPC to insolate CLOUD HSM from other customers
+     we need to install cloudHSM client on EC2 instance.
+ 
+ Tampere-evident control
+  HSMs are purposely build to be tamper resistant if you use AWS CLoud HSM
+  
+ Logging facility is available 
+
 CLoudHSM vs KMS
 CloudHSM:- only org staff can administer the keys while in KMS AWS staff also administer the keys.
