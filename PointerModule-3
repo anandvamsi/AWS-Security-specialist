@@ -1,0 +1,14 @@
+Important Pointers Domain 3
+DDOS protection in Layer3-Layer4 and Layer 7 :: AWS shield
+Cloudfront::- HTML CSS
+
+Direct Connect is a dedicated connection b/w DC and AWS and its a region specifc 
+
+EBS volumne::- AWS wipes the data from EBS before it os made available to reuse.
+Before deleting EBS volumne ,customer can also wipe the data.
+
+Cloudfront Signed N 
+    files in HLS format we need use signed cookies
+
+RMTP distribution,restriced access to individual files user are using client :::- signed URLs
+
